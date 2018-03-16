@@ -17,28 +17,28 @@
     },
     "vmHeadNodeSize": {
       "type": "string",
-      "defaultValue": "Standard_E2_v3",
+      "defaultValue": "Standard_DS4_v2",
       "metadata": {
         "description": "Size of the master node. Get the options here: https://azureprice.net/"
       }
     },
     "sharedDiskSize": {
       "type": "int",
-      "defaultValue": 512,
+      "defaultValue": 4096,
       "metadata": {
         "description": "Size of the shared data disk in GB.  Will exported from the master node and mounted on workers."
       }
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_E2_v3",
+      "defaultValue": "Standard_DS14_v2",
       "metadata": {
         "description": "Size of the worker node(s). Get the options here: https://azureprice.net/"
       }
     },
     "scaleNumber": {
       "type": "int",
-      "defaultValue": 2,
+      "defaultValue": 12,
       "metadata": {
         "description": "Number of worker nodes to create."
       }
