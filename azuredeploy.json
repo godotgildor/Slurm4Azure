@@ -29,13 +29,6 @@
         "description": "Size of the shared data disk in GB.  Will exported from the master node and mounted on workers."
       }
     },
-    "sharedDiskSize2": {
-      "type": "int",
-      "defaultValue": 4095,
-      "metadata": {
-        "description": "Size of the shared data disk in GB.  Will exported from the master node and mounted on workers."
-      }
-    },
     "vmSize": {
       "type": "string",
       "defaultValue": "Standard_DS14_v2",
@@ -188,8 +181,18 @@
               "createOption": "Empty"
             },
             {
-              "diskSizeGB": "[parameters('sharedDiskSize2')]",
+              "diskSizeGB": "[parameters('sharedDiskSize')]",
               "lun": 1,
+              "createOption": "Empty"
+            },
+            {
+              "diskSizeGB": "[parameters('sharedDiskSize')]",
+              "lun": 2,
+              "createOption": "Empty"
+            },
+            {
+              "diskSizeGB": "[parameters('sharedDiskSize')]",
+              "lun": 3,
               "createOption": "Empty"
             }
           ],
