@@ -31,7 +31,7 @@ ADMIN_PASSWORD=$8
 TEMPLATE_BASE=$9
 
 # Format and mount the data disk on master, install NFS, and create a cluster wide NFS share
-sudo sh -c "mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/sdc /dev/sdd" >> /tmp/azuredeploy.log.$$ 2>&1
+sudo sh -c "mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/sdc /dev/sdd /dev/sde /dev/sdf" >> /tmp/azuredeploy.log.$$ 2>&1
 #sudo sh -c "mkfs -t ext4 /dev/sdc" >> /tmp/azuredeploy.log.$$ 2>&1
 sudo sh -c "mkfs -t ext4 /dev/md0" >> /tmp/azuredeploy.log.$$ 2>&1
 sudo sh -c "mkdir /data" >> /tmp/azuredeploy.log.$$ 2>&1
